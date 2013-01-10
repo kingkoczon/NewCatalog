@@ -17,7 +17,13 @@
 		AEBF2818169D12D7006CF890 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEBF2817169D12D7006CF890 /* Default@2x.png */; };
 		AEBF281A169D12D7006CF890 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEBF2819169D12D7006CF890 /* Default-568h@2x.png */; };
 		AEBF281D169D12D7006CF890 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEBF281B169D12D7006CF890 /* MainStoryboard.storyboard */; };
-		AEBF2820169D12D7006CF890 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBF281F169D12D7006CF890 /* ViewController.m */; };
+		AEBF2827169D12EC006CF890 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AEBF2826169D12EC006CF890 /* libxml2.dylib */; };
+		AEBF2830169D132E006CF890 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBF282B169D132E006CF890 /* TFHpple.m */; };
+		AEBF2831169D132E006CF890 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBF282D169D132E006CF890 /* TFHppleElement.m */; };
+		AEBF2832169D132E006CF890 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBF282F169D132E006CF890 /* XPathQuery.m */; };
+		AEBF2835169D1353006CF890 /* Results.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBF2834169D1353006CF890 /* Results.m */; };
+		AEBF2838169D14A5006CF890 /* ParseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBF2837169D14A5006CF890 /* ParseTableViewController.m */; };
+		AEBF283B169D15DA006CF890 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBF283A169D15DA006CF890 /* DetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +41,19 @@
 		AEBF2817169D12D7006CF890 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		AEBF2819169D12D7006CF890 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		AEBF281C169D12D7006CF890 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		AEBF281E169D12D7006CF890 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AEBF281F169D12D7006CF890 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AEBF2826169D12EC006CF890 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		AEBF282A169D132E006CF890 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
+		AEBF282B169D132E006CF890 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
+		AEBF282C169D132E006CF890 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
+		AEBF282D169D132E006CF890 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
+		AEBF282E169D132E006CF890 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
+		AEBF282F169D132E006CF890 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
+		AEBF2833169D1353006CF890 /* Results.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Results.h; sourceTree = "<group>"; };
+		AEBF2834169D1353006CF890 /* Results.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Results.m; sourceTree = "<group>"; };
+		AEBF2836169D14A5006CF890 /* ParseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseTableViewController.h; sourceTree = "<group>"; };
+		AEBF2837169D14A5006CF890 /* ParseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseTableViewController.m; sourceTree = "<group>"; };
+		AEBF2839169D15DA006CF890 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		AEBF283A169D15DA006CF890 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEBF2827169D12EC006CF890 /* libxml2.dylib in Frameworks */,
 				AEBF2804169D12D7006CF890 /* UIKit.framework in Frameworks */,
 				AEBF2806169D12D7006CF890 /* Foundation.framework in Frameworks */,
 				AEBF2808169D12D7006CF890 /* CoreGraphics.framework in Frameworks */,
@@ -56,6 +74,7 @@
 		AEBF27F4169D12D7006CF890 = {
 			isa = PBXGroup;
 			children = (
+				AEBF2826169D12EC006CF890 /* libxml2.dylib */,
 				AEBF2809169D12D7006CF890 /* NewCatalog */,
 				AEBF2802169D12D7006CF890 /* Frameworks */,
 				AEBF2800169D12D7006CF890 /* Products */,
@@ -83,11 +102,15 @@
 		AEBF2809169D12D7006CF890 /* NewCatalog */ = {
 			isa = PBXGroup;
 			children = (
+				AEBF2829169D1306006CF890 /* Model */,
+				AEBF2828169D12FE006CF890 /* hpple */,
 				AEBF2812169D12D7006CF890 /* AppDelegate.h */,
 				AEBF2813169D12D7006CF890 /* AppDelegate.m */,
 				AEBF281B169D12D7006CF890 /* MainStoryboard.storyboard */,
-				AEBF281E169D12D7006CF890 /* ViewController.h */,
-				AEBF281F169D12D7006CF890 /* ViewController.m */,
+				AEBF2836169D14A5006CF890 /* ParseTableViewController.h */,
+				AEBF2837169D14A5006CF890 /* ParseTableViewController.m */,
+				AEBF2839169D15DA006CF890 /* DetailsViewController.h */,
+				AEBF283A169D15DA006CF890 /* DetailsViewController.m */,
 				AEBF280A169D12D7006CF890 /* Supporting Files */,
 			);
 			path = NewCatalog;
@@ -105,6 +128,28 @@
 				AEBF2819169D12D7006CF890 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AEBF2828169D12FE006CF890 /* hpple */ = {
+			isa = PBXGroup;
+			children = (
+				AEBF282A169D132E006CF890 /* TFHpple.h */,
+				AEBF282B169D132E006CF890 /* TFHpple.m */,
+				AEBF282C169D132E006CF890 /* TFHppleElement.h */,
+				AEBF282D169D132E006CF890 /* TFHppleElement.m */,
+				AEBF282E169D132E006CF890 /* XPathQuery.h */,
+				AEBF282F169D132E006CF890 /* XPathQuery.m */,
+			);
+			name = hpple;
+			sourceTree = "<group>";
+		};
+		AEBF2829169D1306006CF890 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AEBF2833169D1353006CF890 /* Results.h */,
+				AEBF2834169D1353006CF890 /* Results.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,7 +220,12 @@
 			files = (
 				AEBF2810169D12D7006CF890 /* main.m in Sources */,
 				AEBF2814169D12D7006CF890 /* AppDelegate.m in Sources */,
-				AEBF2820169D12D7006CF890 /* ViewController.m in Sources */,
+				AEBF2830169D132E006CF890 /* TFHpple.m in Sources */,
+				AEBF2831169D132E006CF890 /* TFHppleElement.m in Sources */,
+				AEBF2832169D132E006CF890 /* XPathQuery.m in Sources */,
+				AEBF2835169D1353006CF890 /* Results.m in Sources */,
+				AEBF2838169D14A5006CF890 /* ParseTableViewController.m in Sources */,
+				AEBF283B169D15DA006CF890 /* DetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +306,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NewCatalog/NewCatalog-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "NewCatalog/NewCatalog-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -267,6 +318,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NewCatalog/NewCatalog-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "NewCatalog/NewCatalog-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -292,6 +344,7 @@
 				AEBF2825169D12D7006CF890 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
