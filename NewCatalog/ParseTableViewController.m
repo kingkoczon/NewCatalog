@@ -37,6 +37,23 @@
 			stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 }
 
+
+-(NSString *)fkURLQueryString:(NSDictionary *)parameterDictionary {
+    NSMutableArray *outParameters = [[NSMutableArray alloc] init];
+    for(id key in [parameterDictionary keysOfEntriesPassingTest:^BOOL(id key, id obj, BOOL *stop) {
+        return ([key isKindOfClass:[NSString class]] || [key respondsToSelector:@selector(stringValue)])
+        && ([obj isKindOfClass:[NSString class]] || [obj respondsToSelector:@selector(stringValue)]);
+    }]){
+        id value = [parameterDictionary objectForKey:key];
+        NSString *pName = [key isKindOfClass:[NSString class]]?key:[key stringValue];
+        NSString *pValue = [value isKindOfClass:[NSString class]]?value:[value stringValue];
+        [outParameters addObject:[NSString stringWithFormat:@"%@=%@",
+                                  [self fkStringByEscapingURIComponent:pName],
+                                  [self fkStringByEscapingURIComponent:pValue]]];
+    }
+    return [outParameters componentsJoinedByString:@"&"];
+}
+
 -(void)loadResults:(NSString *)title {
     
     NSString *urlString = [@"http://ecatalog.coronado.lib.ca.us/search~S0/?searchtype=t&searcharg=" stringByAppendingString:[self fkStringByEscapingURIComponent:title]];
