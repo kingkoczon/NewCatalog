@@ -8,6 +8,7 @@
 
 #import "ParseTableViewController.h"
 
+#import <Foundation/Foundation.h>
 #import "TFHpple.h"
 #import "Results.h"
 
@@ -20,6 +21,49 @@
 @implementation ParseTableViewController
 
 @synthesize detailsViewController = _detailsViewController;
+
+
+-(NSString *)fkStringByEscapingURIComponent:(NSString *)stringWithSpecialChaarcters {
+	return [(__bridge_transfer NSString *)CFURLCreateStringByAddingPercentEscapes(NULL,
+																				  (__bridge CFStringRef)stringWithSpecialChaarcters,
+																				  NULL,
+																				  (CFStringRef)@"!*'();:@&=+$,/?%#[]",
+																				  kCFStringEncodingUTF8)
+			stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+}
+
+-(NSString *)fkStringByUnescapingURIComponent:(NSString *)stringWithPercentEscapes {
+	return [[stringWithPercentEscapes stringByReplacingOccurrencesOfString:@"+" withString:@" "]
+			stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+}
+
+-(void)loadResults:(NSString *)title {
+    
+    NSString *urlString = [@"http://ecatalog.coronado.lib.ca.us/search~S0/?searchtype=t&searcharg=" stringByAppendingString:[self fkStringByEscapingURIComponent:title]];
+    
+    NSURL *resultsUrl = [NSURL URLWithString:urlString];
+    
+    NSData *resultsHtmlData = [NSData dataWithContentsOfURL:resultsUrl];
+    
+    TFHpple *resultsParser = [TFHpple hppleWithHTMLData:resultsHtmlData];
+    
+    NSString *resultsXpathQueryString = @"//td[@class='browseEntryData']/a[2]";
+    NSArray *resultsNodes = [resultsParser searchWithXPathQuery:resultsXpathQueryString];
+    
+    NSMutableArray *newResults = [[NSMutableArray alloc] initWithCapacity:0];
+    for (TFHppleElement *element in resultsNodes) {
+        
+        Results *result = [[Results alloc] init];
+        [newResults addObject:result];
+        
+        result.title = [[element firstChild] content];
+        
+        result.url = [element objectForKey:@"href"];
+    }
+    
+    _objects = newResults;
+    [self.tableView reloadData];
+}
 
 - (void)loadResults {
     
